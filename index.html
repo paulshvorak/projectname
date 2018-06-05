@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="57x57" href="app/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="app/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="app/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="app/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="app/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="app/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="app/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="app/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="app/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="app/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="app/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="app/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="app/favicon/favicon-16x16.png">
+	<link rel="manifest" href="app/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="app/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<title>FIORI</title>
+	<link rel="stylesheet" href="app/css/bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css">
+</head>
+<body>
+
+<div class="page page-main">
+
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<ul class="header__nav">
+					<li class="header__nav-item">
+						<a href="./contacts.html" class="link link--white link--underline">Contacts</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="./about.html" class="link link--white link--underline">About us</a>
+					</li>
+					<li class="header__nav-item header__lang">
+						<select name="" class="header__lang-select">
+							<option class="header__lang-select-item" value="eng" selected>eng</option>
+							<option class="header__lang-select-item" value="ru">ru</option>
+						</select>
+						<div class="header__lang-current">eng</div>
+						<div class="header__lang-list">
+							<div class="header__lang-list-item"><a href="#" class="link link--white">ua</a></div>
+							<div class="header__lang-list-item"><a href="#" class="link link--white">kz</a></div>
+							<div class="header__lang-list-item"><a href="#" class="link link--white">au</a></div>
+						</div>
+					</li>
+				</ul>
+				<div class="header__menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="main-banner">
+			<div class="container">
+				<img src="app/images/logo.svg" alt="logo" class="main-banner__logo">
+				<div class="main-banner__slider">
+					<div class="item">
+						<div class="item-title">We work worldwide1</div>
+						<div class="item-subtitle">We work worldwide</div>
+					</div>
+					<div class="item">
+						<div class="item-title">We work worldwide2</div>
+						<div class="item-subtitle">We work worldwide</div>
+					</div>
+				</div>
+				<div class="main-banner__nav">
+					<div class="main-banner__nav-item">
+						<a href="./weddings.html" class="link link--white link--underline">Weddings</a>
+					</div>
+					<div class="main-banner__nav-item">
+						<a href="./decoration.html" class="link link--white link--underline">Decoration</a>
+					</div>
+					<div class="main-banner__nav-item">
+						<a href="./flowers.html" class="link link--white link--underline">Flowers</a>
+					</div>
+					<div class="main-banner__nav-item header__lang">
+						<select name="" class="header__lang-select">
+							<option class="header__lang-select-item" value="none" selected disabled>Affiliates</option>
+							<option class="header__lang-select-item" value="Ukraine">Ukraine</option>
+							<option class="header__lang-select-item" value="Austria">Austria</option>
+						</select>
+						<div class="header__lang-current">Affiliates</div>
+						<div class="header__lang-list">
+							<div class="header__lang-list-item"><a href="#" class="link link--white">Ukraine</a></div>
+							<div class="header__lang-list-item"><a href="#" class="link link--white">Austria</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
+<script src="app/js/smoothscroll.js"></script>
+
+<script>
+
+	var slider = tns({
+		container: '.main-banner__slider',
+		items: 1,
+		slideBy: 'page',
+		autoplay: true,
+		nav: false,
+		controlsText: ["",""]
+	});
+
+</script>
+
+</body>
+
+</html>

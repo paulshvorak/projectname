@@ -1,0 +1,243 @@
+a {
+	font-size: inherit;
+	font-family: 'PF Din Text Comp Pro', sans-serif;
+	text-decoration: none;
+	color: inherit;
+	transition: color ease .15s;
+}
+
+.link {
+	position: relative;
+	font-size: inherit;
+	font-family: 'PF Din Text Comp Pro', sans-serif;
+	text-decoration: none;
+	color: inherit;
+	&--default {
+		color: $primary;
+		&:hover {
+			color: darken($primary, 10%);
+		}
+	}
+	&--white {
+		color: $white;
+		&:hover {
+			color: $primary;
+		}
+	}
+	&--primary {
+		color: $primary;
+		&:hover {
+			color: $white;
+		}
+	}
+	&--underline {
+		&:before {
+			z-index: 1;
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -6px;
+			width: 100%;
+			height: 4px;
+			background-color: $primary;
+			transform: scaleX(0);
+			transition: transform .2s ease;
+		}
+		&:hover {
+			color: $primary;
+			&:before {
+				transform: scaleX(1);
+			}
+		}
+		&-active {
+			&:after {
+				z-index: 0;
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -6px;
+				width: 100%;
+				height: 4px;
+				background-color: $white;
+			}
+		}
+	}
+	&--underline-default {
+		text-decoration: underline;
+	}
+}
+
+// Sticky footer
+
+.page {
+	position: relative;
+	@include flexbox();
+	@include flex-direction(column);
+}
+
+.main {
+	@include flex(1);
+}
+
+.menu-is-open {
+	overflow: hidden;
+	.header--visible {
+		.header__nav-item .link {
+			color: $white;
+		}
+		.header__menu {
+			span {
+				background: $white;
+			}
+		}
+	}
+}
+
+[placeholder] {
+	text-overflow: ellipsis;
+}
+
+*::selection {
+
+  color: $white;
+  background: $primary;
+
+}
+
+// Container
+
+.container {
+	
+	max-width: $screen-lg;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 48px;
+	padding-right: 48px;
+	
+	@media (max-width: ($screen-xlg - 1)) {
+		
+		// max-width: -webkit-calc(#{$screen-lg} - 72px);
+		// max-width: calc(#{$screen-lg} - 72px);
+		padding-left: 36px;
+		padding-right: 36px;
+		
+	}
+	
+	@media (max-width: $screen-md-max) {
+		
+		// max-width: -webkit-calc(#{$screen-md} - 48px);
+		// max-width: calc(#{$screen-md} - 48px);
+		// padding-left: 24px;
+		// padding-right: 24px;
+		
+	}
+	
+	@media (max-width: $screen-sm-max) {
+		
+		// max-width: -webkit-calc(#{$screen-sm} - 32px);
+		// max-width: calc(#{$screen-sm} - 32px);
+		// padding-left: 16px;
+		// padding-right: 16px;
+		
+	}
+	
+	@media (max-width: $screen-xs-max) {
+		
+		// max-width: -webkit-calc(#{$screen-sm} - 24px);
+		// max-width: calc(#{$screen-sm} - 24px);
+		padding-left: 12px;
+		padding-right: 12px;
+		
+	}
+	
+}
+
+// Button
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-decoration: none;
+	border: 1px solid $primary;
+	background-color: transparent;
+	color: $primary;
+	padding: 16px 32px;
+	font-size: 16px;
+	line-height: 1;
+	border-radius: 4px;
+	transition: .15s ease;
+	&--rounded {
+		border-radius: 40px;
+	}
+	&--lg {
+		max-width: 100%;
+		width: 400px;
+		padding: 32px;
+		@media screen and (max-width: $screen-xs-max) {
+			width: 280px;
+			padding: 16px;
+		}
+	}
+	&:hover {
+		background-color: $primary;
+		color: $white;
+	}
+	&:active {
+		background-color: darken($primary, 10%);
+	}
+}
+
+// Common title 
+
+
+.gallery-loading {
+	
+	@include flexbox();
+	@include justify-content(center);
+	
+	margin: 0 0 24px;
+	
+	.svg-spinner{
+		-webkit-transition-property: -webkit-transform;
+		-webkit-transition-duration: 2s;
+		-webkit-animation-name: rotate;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		
+		-moz-transition-property: -moz-transform;
+		-moz-animation-name: rotate;
+		-moz-animation-duration: 2s;
+		-moz-animation-iteration-count: infinite;
+		-moz-animation-timing-function: linear;
+		
+		transition-property: transform;
+		animation-name: rotate;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	
+	@-webkit-keyframes rotate {
+		from {-webkit-transform: rotate(0deg);}
+		to {-webkit-transform: rotate(360deg);}
+	}
+	
+	@-moz-keyframes rotate {
+		from {-moz-transform: rotate(0deg);}
+		to {-moz-transform: rotate(360deg);}
+	}
+	
+	@keyframes rotate {
+		from {transform: rotate(0deg);}
+		to {transform: rotate(360deg);}
+	}
+	
+}
+
+

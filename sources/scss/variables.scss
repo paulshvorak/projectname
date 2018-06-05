@@ -1,0 +1,19 @@
+// Colors
+
+$primary:         #8ec9cf;
+$primary--dark:   #556c6e;
+$white:           #fff;
+$black:           #000;
+
+// Breakpoints
+
+$screen-xs:       420px;
+$screen-sm:       768px;
+$screen-md:       992px;
+$screen-lg:       1420px;
+$screen-xlg:      1920px;
+
+$screen-2xs-max:  $screen-xs - 1;
+$screen-xs-max:   $screen-sm - 1;
+$screen-sm-max:   $screen-md - 1;
+$screen-md-max:   $screen-lg - 1;
