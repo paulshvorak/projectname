@@ -1,6 +1,6 @@
 a {
 	font-size: inherit;
-	font-family: 'PF Din Text Comp Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	text-decoration: none;
 	color: inherit;
 	transition: color ease .15s;
@@ -9,7 +9,7 @@ a {
 .link {
 	position: relative;
 	font-size: inherit;
-	font-family: 'PF Din Text Comp Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	text-decoration: none;
 	color: inherit;
 	&--default {
@@ -70,6 +70,7 @@ a {
 // Sticky footer
 
 .page {
+	min-height: 100vh;
 	position: relative;
 	@include flexbox();
 	@include flex-direction(column);
@@ -108,43 +109,25 @@ a {
 
 .container {
 	
-	max-width: $screen-lg;
+	max-width: $container-width;
 	margin-right: auto;
 	margin-left: auto;
 	padding-left: 48px;
 	padding-right: 48px;
 	
-	@media (max-width: ($screen-xlg - 1)) {
-		
-		// max-width: -webkit-calc(#{$screen-lg} - 72px);
-		// max-width: calc(#{$screen-lg} - 72px);
-		padding-left: 36px;
-		padding-right: 36px;
-		
+	&--header {
+		max-width: $container-header;
 	}
 	
-	@media (max-width: $screen-md-max) {
+	@media (max-width: ($screen-md-max)) {
 		
-		// max-width: -webkit-calc(#{$screen-md} - 48px);
-		// max-width: calc(#{$screen-md} - 48px);
-		// padding-left: 24px;
-		// padding-right: 24px;
+		padding-left: 24px;
+		padding-right: 24px;
 		
 	}
-	
-	@media (max-width: $screen-sm-max) {
-		
-		// max-width: -webkit-calc(#{$screen-sm} - 32px);
-		// max-width: calc(#{$screen-sm} - 32px);
-		// padding-left: 16px;
-		// padding-right: 16px;
-		
-	}
-	
+			
 	@media (max-width: $screen-xs-max) {
 		
-		// max-width: -webkit-calc(#{$screen-sm} - 24px);
-		// max-width: calc(#{$screen-sm} - 24px);
 		padding-left: 12px;
 		padding-right: 12px;
 		
@@ -172,18 +155,6 @@ a {
 	line-height: 1;
 	border-radius: 4px;
 	transition: .15s ease;
-	&--rounded {
-		border-radius: 40px;
-	}
-	&--lg {
-		max-width: 100%;
-		width: 400px;
-		padding: 32px;
-		@media screen and (max-width: $screen-xs-max) {
-			width: 280px;
-			padding: 16px;
-		}
-	}
 	&:hover {
 		background-color: $primary;
 		color: $white;
@@ -191,10 +162,25 @@ a {
 	&:active {
 		background-color: darken($primary, 10%);
 	}
+	&--head {
+		padding: 11px 37px;
+		border-radius: 5px;
+		border-color: $white;
+		color: $white;
+		&:hover {
+			background-color: rgba(0,176,211, 0.3)
+		}
+	}
+	&--white {
+		font-size: 18px;
+		font-weight: 800;
+		text-transform: uppercase;
+		background-color: $white;
+		color: $black;
+	}
 }
 
-// Common title 
-
+// Loading spinner
 
 .gallery-loading {
 	
@@ -240,4 +226,34 @@ a {
 	
 }
 
+// Title
 
+.section-title {
+	margin-bottom: 30px;
+	&__txt {
+		margin-bottom: 20px;
+		font-size: 32px;
+		font-weight: 800;
+		text-transform: uppercase;
+		color: $dark-gray;
+	}
+	&__deco {
+		@include flexbox();
+		span {
+			width: 50px;
+			height: 5px;
+			&:nth-child(1) {
+				background-color: $blue;
+			}
+			&:nth-child(2) {
+				background-color: $green;
+			}
+			&:nth-child(3) {
+				background-color: $yellow;
+			}
+			&:nth-child(4) {
+				background-color: $red;
+			}
+		}
+	}
+}

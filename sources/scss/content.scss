@@ -1,1 +1,100 @@
 // MAIN SECTION
+
+.main {
+	padding-top: 100px;
+}
+
+// EVENTS
+
+.events {
+	padding: 100px 0;
+	&-list {
+		@include flexbox();
+		@include flex-wrap(wrap);
+		margin: 0 -7px;
+		&__item {
+			position: relative;
+			width: calc((100% - 40px) / 4);
+			height: 460px;
+			outline: 1px solid #e5e4e9;
+			.image {
+				height: 200px;
+				background-image: url("../images/events-test.jpg");
+				background-position: center;
+				background-size: cover;
+			}
+			.details {
+				@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(space-between);
+				@include align-items(center);
+				height: calc(100% - 200px);
+				padding: 15px 20px 20px;
+				text-align: center;
+				&__date {
+					margin: 0 0 10px;
+					font-style: italic;
+				}
+				&__title {
+					font-size: 22px;
+					font-weight: 800;
+				}
+				&__location {
+					margin: 0 0 10px;
+					font-style: italic;
+				}
+				&__price {
+					font-size: 22px;
+					font-weight: 800;
+					color: $green;
+				}
+			}
+			&:nth-child(1) {
+				width: calc((100% - 40px) / 2);
+				margin: 0 calc(40px / 6) 20px;
+				padding: 30px;
+				.image {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: -1;
+					height: auto;
+				}
+			}
+			&:nth-child(2),
+			&:nth-child(3){
+				margin: 0 calc(40px / 6) 20px;
+			}
+			.stub {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: linear-gradient(to top, #aa272f 0%, #ff7000 100%);
+				opacity: 0;
+				transition: .15s ease;
+				
+				@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(center);
+				@include align-items(center);
+				
+				&__title {
+					margin-bottom: 25px;
+					font-size: 22px;
+					font-weight: 800;
+					text-transform: uppercase;
+					color: $white;
+				}
+			}
+			&:hover {
+				.stub {
+					opacity: .9;
+				}
+			}
+		}
+	}
+}

@@ -8,16 +8,35 @@
 </head>
 <body>
 
-<div class="page page-main">
+<div class="page">
 
-	<header class="header">
-		<div class="container">
+	<header class="header header--active js-header">
+		<div class="container container--header">
 			<div class="header__inner">
-				<div class="header__menu">
-					<span></span>
-					<span></span>
-					<span></span>
+				<div class="left">
+					<div class="menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<a href="index.html" class="logo">
+						<img src="app/images/logo.png" alt="logo" class="logo__pic">
+					</a>
 				</div>
+				<ul class="nav">
+					<li class="nav__item">
+						<a href="#" class="nav__item-link">Концерты</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__item-link">Театры</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__item-link">...</a>
+					</li>
+					<li class="nav__item">
+						<button class="btn btn--head">Войти</button>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</header>
@@ -25,30 +44,86 @@
 	<main class="main">
 
 		<section class="main-banner">
-			<div class="container"></div>
+
 		</section>
+
+		<div class="container">
+			<section class="events">
+				<div class="section-title">
+					<div class="section-title__txt">Ближайшие Мероприятия</div>
+					<div class="section-title__deco">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="events-list">
+					<div class="events-list__item">
+						<div class="image"></div>
+						<div class="details">
+							<div class="details__date">31 августа 20:00, пт </div>
+							<div class="details__title">Imagine Dragons</div>
+							<div class="details__location">НСК Олимпийский</div>
+						</div>
+					</div>
+					<div class="events-list__item">
+						<div class="image"></div>
+						<div class="details">
+							<div class="details__top">
+								<div class="details__date">31 августа 20:00, пт </div>
+								<div class="details__title">Imagine Dragons</div>
+							</div>
+							<div class="details__bottom">
+								<div class="details__location">НСК Олимпийский</div>
+								<div class="details__price">от 1100 грн.</div>
+							</div>
+						</div>
+						<div class="stub">
+							<div class="stub__title">TITLE</div>
+							<a class="btn btn--white" href="#">купить билет</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 
 	</main>
 
-	<style>
-
-		.event {
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: column;
-			justify-content: space-between;
-			width: calc(25% - 20px);
-			min-height: 460px;
-			margin: 0 10px 20px;
-			color: #000;
-			box-shadow: inset 0 0 0 1px #d6d6d6;
-			box-sizing: border-box;
-			overflow: hidden;
-		}
-
-
-	</style>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__inner-top">
+					<div class="left">
+						<img src="app/images/logo--blue.png" alt="logo" class="logo">
+						<ul class="nav">
+							<li class="nav__item">
+								<a href="#" class="nav__item-link">О нас</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__item-link">Оферта</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__item-link">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="socials">
+						<div class="socials__item">insta</div>
+						<div class="socials__item">youtube</div>
+						<div class="socials__item">fb</div>
+					</div>
+				</div>
+				<div class="footer__inner-bottom">
+					<div class="copyright">© 2018 Билетный сервис BuYtickets.ua. Все права защищены.</div>
+					<div class="cards">
+						<img src="app/images/mastercard.png" alt="mastercard support" class="cards__item">
+						<img src="app/images/visa.png" alt="visa support" class="cards__item">
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 </div>
 
