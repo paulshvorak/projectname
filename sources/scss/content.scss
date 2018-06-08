@@ -1,7 +1,48 @@
 // MAIN SECTION
 
 .main {
-	padding-top: 100px;
+	&-banner {
+		position: relative;
+		overflow: hidden;
+		.swiper-container-main {
+			height: 100vh;
+			width: 100%;
+			.swiper-slide {
+				background-image: url("../images/event-page-bg.jpg");
+				background-position: center;
+				background-size: cover;
+				@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(center);
+				@include align-items(center);
+				padding: 0 16px;
+				&__date {
+					margin-bottom: 48px;
+					font-size: 24px;
+					font-weight: 800;
+					color: $white;
+				}
+				&__title {
+					margin-bottom: 48px;
+					text-align: center;
+					font-size: 108px;
+					font-weight: 800;
+					line-height: 1.2;
+					text-transform: uppercase;
+					color: $white;
+				}
+				&__place {
+					font-size: 24px;
+					font-style: italic;
+					color: #fefefe;
+				}
+				// test
+				&:nth-child(2) {
+					background-image: url("../images/event-page-bg-01.jpg");
+				}
+			}
+		}
+	}
 }
 
 // EVENTS
@@ -11,10 +52,11 @@
 	&-list {
 		@include flexbox();
 		@include flex-wrap(wrap);
-		margin: 0 -7px;
+		margin: 0 -10px;
 		&__item {
 			position: relative;
-			width: calc((100% - 40px) / 4);
+			width: calc((100% - 80px) / 4);
+			margin: 0 10px 20px;
 			height: 460px;
 			outline: 1px solid #e5e4e9;
 			.image {
@@ -50,8 +92,7 @@
 				}
 			}
 			&:nth-child(1) {
-				width: calc((100% - 40px) / 2);
-				margin: 0 calc(40px / 6) 20px;
+				width: calc((100% - 80px) / 2 + 20px);
 				padding: 30px;
 				.image {
 					position: absolute;
@@ -62,10 +103,33 @@
 					z-index: -1;
 					height: auto;
 				}
-			}
-			&:nth-child(2),
-			&:nth-child(3){
-				margin: 0 calc(40px / 6) 20px;
+				.details {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: 100%;
+					@include justify-content(flex-end);
+					@include align-items(flex-start);
+					&__date {
+						margin-bottom: 16px;
+						font-size: 22px;
+						font-style: italic;
+						color: $white;
+					}
+					&__title {
+						margin-bottom: 16px;
+						font-size: 32px;
+						font-weight: 800;
+						color: $white;
+					}
+					&__location {
+						font-size: 22px;
+						font-style: italic;
+						color: $white;
+					}
+				}
 			}
 			.stub {
 				position: absolute;
@@ -92,9 +156,218 @@
 			}
 			&:hover {
 				.stub {
-					opacity: .9;
+					opacity: .95;
+					.btn {
+						opacity: 1;
+					}
 				}
 			}
 		}
 	}
 }
+
+// PARTIES
+
+.parties {
+	padding-bottom: 100px;
+	&__list {
+		position: relative;
+		height: 410px;
+		padding-bottom: 40px;
+		overflow: hidden;
+		.swiper-container-parties {
+			height: 100%;
+			.swiper-slide {
+				.image {
+					z-index: -1;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-image: url("../images/events-test.jpg");
+					background-position: center;
+					background-size: cover;
+				}
+				.description {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					padding: 20px 20px 30px;
+					@include flexbox();
+					@include flex-direction(column);
+					@include justify-content(flex-end);
+					&__date {
+						margin-bottom: 20px;
+						font-size: 22px;
+						font-style: italic;
+						color: $white;
+					}
+					&__title {
+						font-size: 32px;
+						font-weight: 800;
+						text-transform: uppercase;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
+
+// EVENT PAGE
+
+.page-event {
+	.main {
+		padding-top: 0;
+		&-banner {
+			height: 400px;
+			padding: 80px 0 46px;
+			background-image: url("../images/event-page-bg.jpg");
+			background-size: cover;
+			background-position: center;
+			overflow: auto;
+			&__inner {
+				.title {
+					margin-bottom: 22px;
+					font-size: 32px;
+					font-weight: 800;
+					color: $white;
+					text-transform: uppercase;
+				}
+				.categories {
+					@include flexbox();
+					&__item {
+						font-size: 14px;
+						text-transform: uppercase;
+						color: $yellow;
+						&:not(:last-child) {
+							margin-right: 20px;
+						}
+					}
+				}
+			}
+			
+			.container {
+				height: 100%;
+				
+				@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(flex-end);
+			}
+			
+			
+			
+		}
+	}
+	.info {
+		@include flexbox();
+		padding: 40px 0 60px;
+		&__aside {
+			position: relative;
+			min-width: 330px;
+			width: 330px;
+			margin-right: 60px;
+			.details {
+				margin: -55px 0 55px;
+				padding: 26px 15px 20px;;
+				background-color: $white;
+				box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+				&__item {
+					margin-bottom: 32px;
+					font-size: 18px;
+					@include flexbox();
+					@include align-items(center);
+					&-img {
+						min-width: 50px;
+					}
+				}
+				&__date {
+					max-width: 210px;
+					font-style: italic;
+				}
+				&__place {
+					max-width: 260px;
+					font-style: italic;
+					img {
+						margin-left: 4px;
+					}
+				}
+				&__price {
+					font-weight: 800;
+					text-transform: uppercase;
+				}
+				&__actions {
+					@include flexbox();
+					@include justify-content(center);
+				}
+			}
+			.main-events {
+				&__title {
+					margin-bottom: 20px;
+					font-size: 22px;
+					font-weight: 800;
+					text-transform: uppercase;
+				}
+				&__slider {
+					height: 370px;
+					padding-bottom: 40px;
+					overflow: hidden;
+					.swiper-container-parties {
+						height: 100%;
+						.swiper-slide {
+							.image {
+								z-index: -1;
+								position: absolute;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								background-image: url("../images/events-test.jpg");
+								background-position: center;
+								background-size: cover;
+							}
+							.description {
+								position: absolute;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								padding: 20px 20px 30px;
+								@include flexbox();
+								@include flex-direction(column);
+								@include justify-content(flex-end);
+								&__date {
+									margin-bottom: 20px;
+									font-size: 22px;
+									font-style: italic;
+									color: $white;
+								}
+								&__title {
+									font-size: 32px;
+									font-weight: 800;
+									text-transform: uppercase;
+									color: $white;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.about {
+		&__title {
+			margin-bottom: 30px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		&__txt {
+			margin-bottom: 24px;
+			line-height: 1.2;
+		}
+	}
+}
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ticketsua</title>
+	<link rel="stylesheet" href="app/css/bundle.min.css">
+</head>
+<body>
+
+<div class="page page-event">
+
+	<!--<header class="header header&#45;&#45;active js-header">-->
+		<!--<div class="container container&#45;&#45;header">-->
+			<!--<div class="header__inner">-->
+				<!--<div class="left">-->
+					<!--<div class="menu">-->
+						<!--<span></span>-->
+						<!--<span></span>-->
+						<!--<span></span>-->
+					<!--</div>-->
+					<!--<a href="index.html" class="logo">-->
+						<!--<img src="app/images/logo.png" alt="logo" class="logo__pic">-->
+					<!--</a>-->
+				<!--</div>-->
+				<!--<ul class="nav">-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Концерты</a>-->
+					<!--</li>-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Театры</a>-->
+					<!--</li>-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">...</a>-->
+					<!--</li>-->
+					<!--<li class="nav__item">-->
+						<!--<button class="btn btn&#45;&#45;head">Войти</button>-->
+					<!--</li>-->
+				<!--</ul>-->
+			<!--</div>-->
+			<!--<div class="sidebar-menu">-->
+				<!--<div class="sidebar-menu__close">-->
+					<!--<svg viewBox="0 0 16 16" id="shared&#45;&#45;cancel-thin" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">-->
+						<!--<path d="M8 6.61L1.39 0 0 1.39 6.61 8 0 14.61 1.39 16 8 9.39 14.61 16 16 14.61 9.39 8 16 1.39 14.61 0 8 6.61z" fill-rule="evenodd"></path>-->
+					<!--</svg>-->
+				<!--</div>-->
+				<!--<a href="index.html" class="sidebar-menu__logo">-->
+					<!--<img src="app/images/logo&#45;&#45;blue.png" alt="logo" class="logo">-->
+				<!--</a>-->
+				<!--<div class="sidebar-menu__lang">-->
+					<!--<a href="#" class="sidebar-menu__lang-item">uk</a>-->
+					<!--<a href="#" class="sidebar-menu__lang-item">ru</a>-->
+					<!--<a href="#" class="sidebar-menu__lang-item">en</a>-->
+				<!--</div>-->
+				<!--<ul class="nav">-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Особистий кабінет</a>-->
+					<!--</li>-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Всі події</a>-->
+					<!--</li>-->
+				<!--</ul>-->
+				<!--<ul class="nav">-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Про нас</a>-->
+					<!--</li>-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Контакти</a>-->
+					<!--</li>-->
+				<!--</ul>-->
+				<!--<ul class="nav">-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Квиткові офіси</a>-->
+					<!--</li>-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Доставка</a>-->
+					<!--</li>-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Оплата</a>-->
+					<!--</li>-->
+					<!--<li class="nav__item">-->
+						<!--<a href="#" class="nav__item-link">Повернення</a>-->
+					<!--</li>-->
+
+				<!--</ul>-->
+				<!--<div class="phones-list">-->
+					<!--<a href="tel:+380666666666" class="phones-list__item">-->
+						<!--+380666666666-->
+						<!--<svg viewBox="0 0 20 17" id="phone&#45;&#45;city" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">-->
+							<!--<path d="M20 10l-3.75-3.75V.625h-2.5V3.75L10 0 0 10v.625h2.5v6.25h6.25v-3.75h2.5v3.75h6.25v-6.25H20"></path>-->
+						<!--</svg>-->
+					<!--</a>-->
+					<!--<a href="tel:+380666666666" class="phones-list__item">-->
+						<!--+380666666666-->
+						<!--<svg viewBox="0 0 20 20" id="phone&#45;&#45;kyivstar" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">-->
+							<!--<path d="M10.138 0c.233.054.46.12.65.275.326.26.507.597.508 1.012a691.22 691.22 0 0 1 0 4.776c0 .71-.588 1.283-1.303 1.283a1.297 1.297 0 0 1-1.304-1.283c-.01-1.592-.01-3.184 0-4.776 0-.61.44-1.137 1.05-1.26.03-.005.07-.017.11-.027h.29zM4.583 19.156c-.482-.027-.88-.247-1.117-.706-.24-.462-.208-.926.09-1.35.42-.6.86-1.19 1.29-1.78.495-.684.99-1.368 1.488-2.05.47-.642 1.314-.744 1.925-.237.49.41.59 1.17.22 1.718-.28.4-.56.78-.85 1.17l-1.95 2.69c-.27.36-.63.54-1.1.55m7.99-6.44c.44.01.8.18 1.05.52.93 1.28 1.87 2.56 2.79 3.85.58.82.12 1.91-.87 2.06-.51.08-.94-.11-1.25-.53-.69-.93-1.37-1.87-2.05-2.81-.25-.34-.51-.68-.75-1.03-.31-.46-.33-.95-.04-1.42.246-.41.626-.604 1.09-.613M19.97 7.5c0 .71-.34 1.196-.884 1.375-1.5.49-3 .984-4.504 1.466-.786.25-1.553-.22-1.697-1.03-.11-.62.274-1.24.902-1.45l1.665-.54c.91-.29 1.817-.58 2.725-.88.34-.11.68-.13 1.01.02.51.237.764.64.784 1.06M0 7.62c.003-.87.82-1.486 1.663-1.24.507.15 1.006.32 1.508.483l3.01.98c.61.2.96.71.93 1.35-.02.56-.45 1.06-1.02 1.18-.23.05-.46.04-.69-.04L1.8 9.16c-.303-.098-.608-.194-.91-.296A1.283 1.283 0 0 1 0 7.618" fill-rule="evenodd"></path>-->
+						<!--</svg>-->
+					<!--</a>-->
+					<!--<a href="tel:+380666666666" class="phones-list__item">-->
+						<!--+380666666666-->
+						<!--<svg viewBox="0 0 20 20" id="phone&#45;&#45;vodafone" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">-->
+							<!--<path d="M13.855.745a3.942 3.942 0 0 0-3.097 3.84c0 .04.01.09.01.13 2.795.594 4.204 2.476 4.204 4.96 0 2.79-2.282 5.052-5.072 5.052S4.504 12.4 4.504 8.947c0-4.212 3.61-8.164 8.758-8.29.093-.002.24.002.39.01A10.251 10.251 0 0 0 10 0C4.478 0 0 4.332 0 9.675c0 5.343 4.478 9.674 10 9.674 5.523 0 10-4.333 10-9.676 0-4.02-2.536-7.47-6.145-8.93z" fill-rule="evenodd"></path>-->
+						<!--</svg>-->
+					<!--</a>-->
+					<!--<a href="tel:+380666666666" class="phones-list__item">-->
+						<!--+380666666666-->
+						<!--<svg viewBox="0 0 20 20" id="phone&#45;&#45;lifecell" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">-->
+							<!--<path d="M20 8.93v1.644c0 .49-.08.98-.184 1.46a9.582 9.582 0 0 1-1.07 2.826c-.508.88-1.092 1.672-1.834 2.37a10.015 10.015 0 0 1-2.49 1.722c-1.89.917-4.03 1.203-6.105.87a9.269 9.269 0 0 1-1.091-.251c-.086-.02-.286-.05-.34-.13-.08-.12.056-.5.087-.63.06-.265.12-.534.2-.8.31-1.01.73-1.985 1.26-2.9 1-1.72 2.49-3.19 4.235-4.142a9.26 9.26 0 0 1 .655-.324c.093-.04.223-.125.33-.1.108.025.19.145.27.213.363.303.806.47 1.275.506a2.158 2.158 0 0 0 2.123-1.335c.34-.843.1-1.834-.58-2.435-.604-.54-1.54-.678-2.28-.347a2.196 2.196 0 0 0-.97.847c-.105.172-.183.36-.236.56-.044.162-.025.432-.126.57-.105.142-.396.174-.555.23a18.932 18.932 0 0 0-2.228.942c-1.806.918-3.497 2.223-4.79 3.79-.66.802-1.28 1.695-1.76 2.617-.1.185-.174.48-.32.63-.164.175-.373-.126-.49-.245-.35-.35-.678-.723-.977-1.116-.152-.2-.213-.33-.18-.58.032-.263.027-.53.056-.79.055-.513.16-1.02.29-1.52.26-1 .634-1.944 1.135-2.846.49-.884 1.098-1.72 1.814-2.436.377-.38.793-.74 1.223-1.06.17-.12.3-.29.48-.13.176.157.33.29.54.397.84.417 1.83.264 2.506-.383.694-.664.824-1.803.334-2.62-.5-.834-1.48-1.208-2.41-.98-.844.204-1.455.94-1.58 1.785-.02.14.02.4-.068.516-.05.07-.185.09-.26.12-.133.05-.267.1-.4.155-.463.19-.913.426-1.344.682a11.071 11.071 0 0 0-2.41 1.898A11.058 11.058 0 0 0 .4 9.913c-.068.11-.128.228-.2.338-.055.087-.088.154-.162.056-.055-.072-.027-.316-.027-.4a9.69 9.69 0 0 1 .075-1.18c.066-.504.15-1.02.3-1.505.623-2 1.78-3.716 3.393-5.05A9.103 9.103 0 0 1 6.413.657C7.33.31 8.34.05 9.326.01c1.092-.04 2.148.03 3.21.3.99.254 1.924.65 2.79 1.196 1.737 1.096 3.054 2.662 3.898 4.53.422.93.596 1.895.776 2.893 0 .69-.03-.17 0 0" fill-rule="evenodd"></path>-->
+						<!--</svg>-->
+					<!--</a>-->
+				<!--</div>-->
+				<!--<div class="socials">-->
+					<!--<div class="socials__item">insta</div>-->
+					<!--<div class="socials__item">youtube</div>-->
+					<!--<div class="socials__item">fb</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</header>-->
+
+	<main class="main">
+
+		<div class="container">
+
+			<div class="modal">
+				<div class="modal__top">
+					<div class="title">вход</div>
+					<div class="close">x</div>
+				</div>
+				<div class="modal__inner">
+					<form action="" class="form">
+						<div class="form__item">
+							<input type="email" placeholder="Ваш E-mail">
+							<div class="error">Неправильный e-mail</div>
+						</div>
+						<div class="form__item">
+							<input type="email" placeholder="Ваш E-mail">
+							<div class="error">Неправильный e-mail</div>
+						</div>
+						<div class="form__forgot">
+							<a class="btn btn--green btn-block form__forgot-link" href="#">Забыли пароль?</a>
+						</div>
+						<div class="form__separator"><span>или</span></div>
+						<div class="form__actions">
+							<button class="btn btn-block btn--fb">fb</button>
+							<button class="btn btn--green btn-block">sign up</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+	</main>
+
+	<!--<footer class="footer">-->
+		<!--<div class="container">-->
+			<!--<div class="footer__inner">-->
+				<!--<div class="footer__inner-top">-->
+					<!--<div class="left">-->
+						<!--<img src="app/images/logo&#45;&#45;blue.png" alt="logo" class="logo">-->
+						<!--<ul class="nav">-->
+							<!--<li class="nav__item">-->
+								<!--<a href="#" class="nav__item-link">О нас</a>-->
+							<!--</li>-->
+							<!--<li class="nav__item">-->
+								<!--<a href="#" class="nav__item-link">Оферта</a>-->
+							<!--</li>-->
+							<!--<li class="nav__item">-->
+								<!--<a href="#" class="nav__item-link">Контакты</a>-->
+							<!--</li>-->
+						<!--</ul>-->
+					<!--</div>-->
+					<!--<div class="socials">-->
+						<!--<div class="socials__item">insta</div>-->
+						<!--<div class="socials__item">youtube</div>-->
+						<!--<div class="socials__item">fb</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="footer__inner-bottom">-->
+					<!--<div class="copyright">© 2018 Билетный сервис BuYtickets.ua. Все права защищены.</div>-->
+					<!--<div class="cards">-->
+						<!--<img src="app/images/mastercard.png" alt="mastercard support" class="cards__item">-->
+						<!--<img src="app/images/visa.png" alt="visa support" class="cards__item">-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</footer>-->
+
+</div>
+
+
+</body>
+
+</html>

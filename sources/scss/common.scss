@@ -105,6 +105,28 @@ a {
 
 }
 
+// Inputs style
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	padding: 12px 14px 12px;
+	border-radius: 5px;
+	font-size: 18px;
+	line-height: 1;
+	border: 1px solid #c1c1c1;
+	background-color: $white;
+	
+	&:focus {
+		border: 1px solid $primary;
+		outline: none;
+	}
+	&+.error {
+		//display: none;
+	}
+}
+
 // Container
 
 .container {
@@ -147,17 +169,19 @@ a {
 	-ms-user-select: none;
 	user-select: none;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
 	border: 1px solid $primary;
-	background-color: transparent;
-	color: $primary;
+	background-color: $primary;
+	color: $white;
 	padding: 16px 32px;
 	font-size: 16px;
 	line-height: 1;
 	border-radius: 4px;
 	transition: .15s ease;
 	&:hover {
-		background-color: $primary;
-		color: $white;
+		background-color: darken($primary, 10%);
+		border-color: darken($primary, 10%);
 	}
 	&:active {
 		background-color: darken($primary, 10%);
@@ -165,10 +189,12 @@ a {
 	&--head {
 		padding: 11px 37px;
 		border-radius: 5px;
+		background-color: transparent;
 		border-color: $white;
 		color: $white;
 		&:hover {
-			background-color: rgba(0,176,211, 0.3)
+			background-color: rgba(0,176,211, 0.3);
+			border-color: $white;
 		}
 	}
 	&--white {
@@ -176,7 +202,30 @@ a {
 		font-weight: 800;
 		text-transform: uppercase;
 		background-color: $white;
+		border-color: $white;
 		color: $black;
+		&:hover {
+			border-color: $primary;
+		}
+	}
+	&--green {
+		border-color: $green;
+		background-color: $green;
+		&:hover {
+			background-color: darken($green, 5%);
+			border-color: darken($green, 5%);
+		}
+	}
+	&-block {
+		width: 100%;
+	}
+	&--fb {
+		border-color: $blue;
+		background-color: $blue;
+		&:hover {
+			background-color: darken($blue, 5%);
+			border-color: darken($blue, 5%);
+		}
 	}
 }
 
@@ -253,6 +302,47 @@ a {
 			}
 			&:nth-child(4) {
 				background-color: $red;
+			}
+		}
+	}
+}
+
+// COMMON BLOCKS
+
+.subscribe {
+	@include flexbox();
+	@include justify-content(space-between);
+	@include align-items(center);
+	padding: 40px 0;
+	border-top: 1px solid #c1c1c1;;
+	&__title {
+		font-size: 22px;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	&__form {
+		@include flexbox();
+		@include align-items(center);
+		input {
+			width: 300px;
+			margin-right: 10px;
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		display: block;
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		&__form {
+			display: block;
+			input {
+				width: 100%;
+			}
+			button {
+				margin-top: 12px;
+				width: 100%;
 			}
 		}
 	}
