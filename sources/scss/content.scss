@@ -190,6 +190,19 @@
 			}
 		}
 	}
+	&-more {
+		margin: 50px 0 0;
+		text-align: center;
+		.btn {
+			background-color: transparent;
+			border: 1px solid $blue;
+			color: $blue;
+			&:hover {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+	}
 	@media screen and (max-width: 1280px) {
 		&-list {
 			&__item {
