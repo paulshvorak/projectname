@@ -19,21 +19,13 @@
 					padding-bottom: 3px;
 					&__item {
 						&-link {
-							padding: 0 12px;
+							margin: 0 12px;
 							font-size: 14px;
 							font-weight: 700;
 						}
 						&:not(:last-child) {
 							border-right: 1px solid #b3b3b3;
 						}
-					}
-				}
-			}
-			.socials {
-				@include flexbox();
-				&__item {
-					&:not(:last-child) {
-						margin-right: 20px;
 					}
 				}
 			}
@@ -73,7 +65,7 @@
 						@include justify-content(center);
 						&__item {
 							&-link {
-								padding: 0 18px;
+								margin: 0 18px;
 							}
 						}
 					}

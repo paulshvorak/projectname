@@ -43,6 +43,32 @@
 			}
 		}
 	}
+	@media screen and (max-width: $screen-sm-max) {
+		&-banner {
+			.swiper-container-main {
+				.swiper-slide {
+					&__date {
+						margin-bottom: 32px;
+					}
+					&__title {
+						margin-bottom: 36px;
+						font-size: 82px;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		&-banner {
+			.swiper-container-main {
+				.swiper-slide {
+					&__title {
+						font-size: 48px;
+					}
+				}
+			}
+		}
+	}
 }
 
 // EVENTS
@@ -164,6 +190,34 @@
 			}
 		}
 	}
+	@media screen and (max-width: 1280px) {
+		&-list {
+			&__item {
+				width: calc((100% - 60px) / 3);
+				&:nth-child(1) {
+					width: calc(((100% - 60px) / 3) * 2  + 20px);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		&-list {
+			&__item {
+				height: 400px;
+				width: calc((100% - 40px) / 2);
+				&:nth-child(1) {
+					width: 100%;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		&-list {
+			&__item {
+				width: 100%;
+			}
+		}
+	}
 }
 
 // PARTIES
@@ -204,12 +258,18 @@
 						font-size: 22px;
 						font-style: italic;
 						color: $white;
+						@media screen and (max-width: $screen-xs-max) {
+							font-size: 16px;
+						}
 					}
 					&__title {
 						font-size: 32px;
 						font-weight: 800;
 						text-transform: uppercase;
 						color: $white;
+						@media screen and (max-width: $screen-xs-max) {
+							font-size: 22px;
+						}
 					}
 				}
 			}
@@ -367,6 +427,42 @@
 		&__txt {
 			margin-bottom: 24px;
 			line-height: 1.2;
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		.info {
+			display: block;
+			&__aside {
+				@include flexbox();
+				@include justify-content(space-between);
+				min-width: 0;
+				width: 100%;
+				margin-right: 0;
+				.details {
+					@include align-self(flex-start);
+					width: 47%;
+				}
+				.main-events {
+					width: 47%;
+					margin: -55px 0 15px;;
+					&__title {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		.info {
+			&__aside {
+				display: block;
+				.details {
+					width: 100%;
+				}
+				.main-events {
+					display: none;
+				}
+			}
 		}
 	}
 }

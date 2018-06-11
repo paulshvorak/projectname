@@ -28,7 +28,7 @@
 
 <div class="page page-event">
 
-	<header class="header header--active js-header">
+	<header class="header js-header">
 		<div class="container container--header">
 			<div class="header__inner">
 				<div class="left">
@@ -43,10 +43,10 @@
 				</div>
 				<ul class="nav">
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Концерты</a>
+						<a href="#" class="nav__item-link link link--underline">Концерты</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Театры</a>
+						<a href="#" class="nav__item-link link link--underline">Театры</a>
 					</li>
 					<li class="nav__item">
 						<a href="#" class="nav__item-link">...</a>
@@ -72,40 +72,40 @@
 				</div>
 				<ul class="nav">
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Особистий кабінет</a>
+						<a href="#" class="nav__item-link link link--underline">Особистий кабінет</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Всі події</a>
+						<a href="#" class="nav__item-link link link--underline">Всі події</a>
 					</li>
 				</ul>
 				<ul class="nav nav--mobile">
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Концерты</a>
+						<a href="#" class="nav__item-link link link--underline">Концерты</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Театры</a>
-					</li>
-				</ul>
-				<ul class="nav">
-					<li class="nav__item">
-						<a href="#" class="nav__item-link">Про нас</a>
-					</li>
-					<li class="nav__item">
-						<a href="#" class="nav__item-link">Контакти</a>
+						<a href="#" class="nav__item-link link link--underline">Театры</a>
 					</li>
 				</ul>
 				<ul class="nav">
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Квиткові офіси</a>
+						<a href="#" class="nav__item-link link link--underline">Про нас</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Доставка</a>
+						<a href="#" class="nav__item-link link link--underline">Контакти</a>
+					</li>
+				</ul>
+				<ul class="nav">
+					<li class="nav__item">
+						<a href="#" class="nav__item-link link link--underline">Квиткові офіси</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Оплата</a>
+						<a href="#" class="nav__item-link link link--underline">Доставка</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__item-link">Повернення</a>
+						<a href="#" class="nav__item-link link link--underline">Оплата</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__item-link link link--underline">Повернення</a>
 					</li>
 				</ul>
 				<ul class="nav nav--mobile">
@@ -140,15 +140,15 @@
 					</a>
 				</div>
 				<div class="socials">
-					<div class="socials__item">insta</div>
-					<div class="socials__item">youtube</div>
-					<div class="socials__item">fb</div>
+					<a href="#" target="_blank" class="socials__item"></a>
+					<a href="#" target="_blank" class="socials__item"></a>
+					<a href="#" target="_blank" class="socials__item"></a>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<main class="main">
+	<main class="main js-main">
 
 		<section class="main-banner">
 			<div class="container">
@@ -269,20 +269,20 @@
 						<img src="app/images/logo--blue.png" alt="logo" class="logo">
 						<ul class="nav">
 							<li class="nav__item">
-								<a href="#" class="nav__item-link">О нас</a>
+								<a href="#" class="nav__item-link link link--underline">О нас</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__item-link">Оферта</a>
+								<a href="#" class="nav__item-link link link--underline">Оферта</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__item-link">Контакты</a>
+								<a href="#" class="nav__item-link link link--underline">Контакты</a>
 							</li>
 						</ul>
 					</div>
 					<div class="socials">
-						<div class="socials__item">insta</div>
-						<div class="socials__item">youtube</div>
-						<div class="socials__item">fb</div>
+						<a href="#" target="_blank" class="socials__item"></a>
+						<a href="#" target="_blank" class="socials__item"></a>
+						<a href="#" target="_blank" class="socials__item"></a>
 					</div>
 				</div>
 				<div class="footer__inner-bottom">
@@ -306,6 +306,7 @@
 	var mySwiper = new Swiper ('.swiper-container-parties', {
 		// Optional parameters
 		loop: true,
+		autoplay: true,
 		// If we need pagination
 		pagination: {
 			el: '.swiper-pagination',
