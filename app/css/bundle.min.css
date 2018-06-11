@@ -125,7 +125,7 @@ to{transform:rotate(360deg)}
 .header .sidebar-menu__close{position:absolute;top:42px;left:100px;cursor:pointer}
 .header .sidebar-menu__close svg{width:20px;height:20px;transition:.15s ease}
 .header .sidebar-menu__close:hover svg{fill:#00b0d3}
-.header .sidebar-menu__logo{display:block;margin-bottom:35px}
+.header .sidebar-menu__logo{display:block;max-width:175px;margin-bottom:35px}
 .header .sidebar-menu__lang{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;margin-bottom:30px}
 .header .sidebar-menu__lang-item{padding:3px 6px;text-transform:uppercase;color:#fff;background:#00b0d3;transition:.15s ease}
 .header .sidebar-menu__lang-item:hover{background:#009bba}
