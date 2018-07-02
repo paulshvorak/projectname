@@ -62,6 +62,60 @@
 					margin-right: 40px;
 				}
 			}
+			.menu {
+				@include flexbox();
+				@include justify-content(center);
+				@include align-items(center);
+				position: relative;
+				width: 50px;
+				height: 40px;
+				border-radius: 5px 5px 0 0;
+				transition: .15s ease;
+				cursor: pointer;
+				&__icon {
+					@include flexbox();
+					span {
+						width: 4px;
+						height: 4px;
+						margin: 0 3px;
+						background-color: $white;
+						border-radius: 5px;
+					}
+				}
+				&__list {
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 222px;
+					padding: 10px 0;
+					border-radius: 0 5px 5px 5px;
+					background-color: $white;
+					box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+					overflow: hidden;
+					display: none;
+					&-item {
+						display: block;
+						padding: 10px 20px;
+						color: $dark-gray;
+						transition: .15s ease;
+						&:hover {
+							background-color: $blue;
+							color: $white;
+						}
+					}
+				}
+				&:hover {
+					background-color: $white;
+					&>.menu__icon {
+						span {
+							background-color: $dark-gray;
+						}
+					}
+					&>.menu__list {
+						display: block;
+					}
+				}
+			}
 		}
 	}
 	.sidebar-menu {
