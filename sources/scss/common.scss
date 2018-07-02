@@ -54,6 +54,17 @@ a {
 	}
 }
 
+// TEXT COLOR
+
+.text {
+	&--bold {
+		font-weight: bold;
+	}
+	&--green {
+		color: $green;
+	}
+}
+
 // Sticky footer
 
 .page {
@@ -102,6 +113,12 @@ input[type="password"] {
 	&+.error {
 		//display: none;
 	}
+}
+
+input[type="password"] {
+	background-image: url("../images/eye-icon.png");
+	background-position: calc(100% - 16px) center;
+	background-repeat: no-repeat;
 }
 
 // Container

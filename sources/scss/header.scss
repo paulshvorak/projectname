@@ -228,6 +228,11 @@
 				color: $white;
 			}
 		}
+		&-important {
+			position: fixed !important;
+			box-shadow: 0 0 16px rgba(0, 0, 0, 0.2) !important;
+			background-color: rgba(0,101,189, .8) !important;
+		}
 	}
 	@media screen and (max-width: $screen-sm-max) {
 		&__inner {
